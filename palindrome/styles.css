@@ -45,6 +45,9 @@ button {
   }
   
   input {
+    margin-top: 10px;
+    margin-left: 45%;
+    margin-right: 45%;
     background-color: #aabbcc;
     border-radius: 5px;
     box-shadow: 0px 3px;
