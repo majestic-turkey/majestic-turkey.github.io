@@ -9,7 +9,10 @@ html {
 
 header {
     position: fixed;
+    top: 0;
     width: 99%;
+    z-index: 5;
+    background-color: black;
 }
 
 main {
@@ -21,11 +24,24 @@ main {
 nav {
     height: 69px;
     border: 1px solid seashell;
-    text-align: right;
+    display: inline-block;
+    width: 100%;
+}
+
+nav img {
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
 
 nav ul {
     list-style-type: none;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    text-align: right;
 }
 
 .navbar li {
@@ -35,4 +51,85 @@ nav ul {
 
 .navbar li a {
     color: seashell;
+}
+
+#mission {
+    background-image: url("./images/img-mission-background.jpg");
+    height: 700px;
+    width: 1200px;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+.textcontainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: black;
+    width: 100%;
+}
+
+#featuredcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.featured {
+    padding: 0;
+    margin: 0;
+}
+
+.featured img {
+    width: 300px;
+    height: 200px;
+}
+
+.featured figcaption {
+    color: seashell;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.locations {
+    background-image: url("./images/img-locations-background.jpg");
+    background-size: cover;
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#locationcontainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.locations h2 {
+    text-align: center;
+    color: seashell;
+    padding-top: 50px;
+}
+
+.location {
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    line-height: 2.5;
+}
+
+.contact {
+    height: 200px;
+    margin-top: 50px;
+}
+
+footer {
+    text-align: left;
+    margin-left: 20px;
 }
