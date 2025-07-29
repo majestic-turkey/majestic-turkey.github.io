@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            A Museum of Post-Modern Art?
-        </title>
-    </head>
-    <body>
-        <a href="/palindrome/palindrome.html">Palindrome Checker</a><br>
-        <a href="/dicegame/dicegame.html">Yahtzee...?</a><br>
-        <a href="/desmoto/index.html">Hearts and Rafts</a><br>git
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore the majestic wild turkey, a symbol of grace and beauty in nature. Learn about its programming projects here." />
+    <title>A Majestic Turkey in the Wild</title>
+</head>
+<body>
+    <header>
+        <img id="banner" src="./images/00098-1339599039.png" alt="The skyline of Ankara, Turkiye" role="none"/>
+        <h1>A Majestic Turkey</h1>
+        <p id="tagline">Experience the beauty and grace of the (nonalcoholic) wild turkey in its natural habitat.</p>
+    </header>
+    
+    <main>
+        <section id="introduction">
+            <h2>About Me</h2>
+            <article id="about-me">
+                <p>I am a very mammalian human that just so happens to wear a nom de guerre related to either an Ottoman state or several species of fowl. Your choice.</p>
+                <figure>
+                    <img id="selfie" src="./images/00097-4093412751.png" alt="A turkey standing majestically" />
+                    <figcaption>A majestic turkey standing on a mountain in Turkiye.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <nav id="project-list">
+                <ul>
+                    <li><a href="./desmoto/index.html" target="_blank">Desmoto</a></li>
+                    <li><a href="./dicegame/dicegame.html" target="_blank">Dice Game</a></li>
+                    <li><a href="./fotomatic/index.html" target="_blank">Fotomatic</a></li>
+                    <li><a href="./palindrome/palindrome.html" target="_blank">Palindrome Checker</a></li>
+                    <li><a href="./teacozy/index.html" target="_blank">Tea Cozy</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p onclick="displayMessage(createMessage())">If you have any questions or just want to chat, feel free to reach out!</p>
+            <h3 id="crew"></h3>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 A Majestic Turkey. All rights reserved. And some lefts.</p>
+    </footer>
+</body>
+<script src="./message/message.js"></script>
 </html>

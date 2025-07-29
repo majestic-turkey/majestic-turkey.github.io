@@ -98,7 +98,10 @@ const team = [
 
 const createMessage = () => {
     const randNum = Math.floor(Math.random() * team.length);
-    console.log(`Today's player is ${team[randNum].name}, who plays as a ${team[randNum].position} wearing number ${team[randNum].number}.`);
-}
+    return `Also, today's soccer player is ${team[randNum].name}, who plays as a ${team[randNum].position} wearing number ${team[randNum].number}.`;
+};
 
-createMessage();
+const displayMessage = (msg) => {
+    const crewElement = document.getElementById("crew");
+    crewElement.textContent = msg;
+};
