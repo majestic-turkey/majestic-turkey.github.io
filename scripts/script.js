@@ -159,3 +159,61 @@ const displayMessage = (msg) => {
     const crewElement = document.getElementById("crew");
     crewElement.textContent = msg;
 };
+
+
+// Object containing extra information about various projects on this site
+const projects = {
+    desmoto: {
+        description: "A motorcycle simulation game.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "./desmoto/index.html"
+    },
+    dicegame: {
+        description: "A simple dice rolling game.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "./dicegame/dicegame.html"
+    },
+    fotomatic: {
+        description: "A photo editing application.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "./fotomatic/index.html"
+    },
+    palindromechecker: {
+        description: "A tool to check if a word is a palindrome.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "./palindrome/palindrome.html"
+    },
+    teacozy: {
+        description: "An online store for tea cozies.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "./teacozy/index.html"
+    }
+};
+
+// Grab all project list items then add event listeners to them
+const projectItems = document.querySelectorAll(".project a");
+
+projectItems.forEach(item => {
+    item.addEventListener("mouseover", (event) => {
+        event.preventDefault();
+        const projectName = item.textContent.toLowerCase().replace(/\s+/g, '');
+        const project = projects[projectName];
+         displayProjectInfo(project, event.target);
+    });
+    item.addEventListener("mouseout", (event) => {
+        const projectInfo = event.target.querySelector(".project-info");
+        if (projectInfo && projectInfo.classList.contains("project-info")) {
+            projectInfo.remove();
+        }
+    });
+});
+
+// Display additional information next to the project name
+const displayProjectInfo = (project, target) => {
+    const projectInfo = document.createElement("div");
+    projectInfo.classList.add("project-info");
+    projectInfo.innerHTML = `
+        <p><strong>Description:</strong> ${project.description}</p>
+    `;
+    target.appendChild(projectInfo);
+};
